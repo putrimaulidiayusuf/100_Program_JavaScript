@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="tabung()">Click here</button>
+  <button onclick="kerucut()">Click this</button>
+  <button onclick="persegi_panjang()">Click</button>
+  <script>
+    function tabung() {
+      let r = 5
+      let t = 10
+      let volume = Math.PI * r * r * t
+      console.log('Volume: ' + volume)}
+  function kerucut() {
+    let r = 5
+    let t = 10
+    let volume = (1/3) * Math.PI * r^2 * t
+    console.log('Volume: ' + volume)}
+  function persegi_panjang() {
+    let panjang = 10
+    let lebar = 5
+    let luas = panjang * lebar
+    console.log('Luas: ' + luas)}
+  </script>
+</body>
+</html>

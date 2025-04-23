@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+<div>
+  <input type="number" id="pkn">
+  <label for="pkn">Nilai PKN</label>
+</div>
+<div>
+  <input type="number" id="mtk">
+  <label for="mtk">Nilai MTK</label>
+</div>
+<div>
+  <input type="number" id="inggris">
+  <label for="inggris">Nilai B.ING</label>
+</div>
+
+  <button type="button" id="button">Hitung</button>
+
+  <p>Jumlah Nilai : <span id="jumlah_nilai"></span></p>
+  <p>Rata - Rata : <span id="rata_rata"></span></p>
+  <p>Predikat : <span id="predikat"></span></p>
+  <p>Status Kelulusan : <span id="status_kelulusan"></span></p>
+  <p>Keterangan : <span id="keterangan"></span></p>
+
+<script>
+  const pkn = document.getElementById("pkn")
+  const mtk = document.getElementById("mtk")
+  const inggris = document.getElementById("inggris")
+  const button = document.getElementById("button")
+  const labelJumlahNilai = document.getElementById("jumlah_nilai")
+  const labelRataRata = document.getElementById("rata_rata")
+  const labelPredikat = document.getElementById("predikat")
+  const labelStatusKelulusan = document.getElementById("status_kelulusan")
+  const labelKeterangan = document.getElementById("keterangan")
+
+  button.addEventListener('click', function(){ //addEventListener = function
+    let jumlah_nilai = parseInt(pkn.value)+parseInt(mtk.value)+parseInt(inggris.value)
+      labelJumlahNilai.textContent = jumlah_nilai
+    let rata_rata = jumlah_nilai / 3
+      labelRataRata.textContent = rata_rata
+    let predikat = ""
+      if (rata_rata >= 90) {predikat = "A"} 
+        else if (rata_rata >= 80) {predikat = "B"} 
+        else if (rata_rata >= 70) {predikat = "C"} 
+        else if (rata_rata >= 60) {predikat = "D"}
+        else {predikat = "E"}
+      labelPredikat.textContent = predikat
+    let status_kelulusan = ""
+      if (["A", "B", "C"].includes(predikat)) {
+        status_kelulusan = "LULUS"}
+      else {
+        status_kelulusan = "TIDAK LULUS"}
+      labelStatusKelulusan.textContent = status_kelulusan
+    let keterangan = ""
+      if (status_kelulusan == "LULUS") {
+        keterangan = "Selamat Anda Lulus"}
+      else {keterangan = "Silahkan coba lagi"}
+      labelKeterangan.textContent = keterangan})
+</script>
+</script>
+</body>
+</html>

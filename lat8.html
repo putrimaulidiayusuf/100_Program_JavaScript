@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>Menghitung Jarak Tempuh Mobil</p>
+  <div>
+    <label for="kecepatan">Masukkan Kecepatan Mobil Melaju dalam KM/Jam : </label>
+    <input type="number" id="kecepatan"></div>
+  <div>
+    <label for="waktu">Masukkan Waktu Tempuh Mobil dalam Jam : </label>
+    <input type="number" id="waktu"></div>
+  <button type="button" id="button">Hitung</button>
+  <p>Jarak yang sudah di Tempuh Mobil : <span id="jarak"></span></p>
+  <script>
+    const kecepatan = document.getElementById("kecepatan")
+    const waktu = document.getElementById("waktu")
+    const button = document.getElementById("button")
+    const labelJarak = document.getElementById("jarak")
+
+    button.addEventListener('click', function(){ //addEventListener = function
+      let jarak = parseInt(kecepatan.value) * parseInt(waktu.value)
+      labelJarak.textContent = jarak
+    })
+  </script>
+</body>
+</html>

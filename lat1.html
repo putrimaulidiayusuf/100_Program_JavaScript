@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+  <title>Latihan Js 1</title>
+</head>
+<body>
+  <button onclick="hitung()">Click Me</button> <!--onclick itu disebutnya event atau function-->
+  <script>
+    let status = confirm("Are you sure you want to next?")
+      if (status) {
+        // let r = 20; //let buat variable (modern)
+        let r = Number(prompt('Masukkan Jari-jari : ')) //prompt bisa buat inputan
+        const phi = 3.14 //const buat konstanta
+        let keliling = 2 * phi * r
+          console.log('Keliling Lingkaran =' + keliling) //console.log buat nampilin
+      } else {
+        alert("You pressed Cancel!")}
+      </script>
+</body>
+</html>

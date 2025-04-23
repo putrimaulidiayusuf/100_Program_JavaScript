@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>Ekspresi Matematika</p>
+  <div>
+    <label for="A">Masukkan Nilai A : </label>
+    <input type="number" id="A">
+  </div>
+  <div>
+    <label for="B">Masukkan Nilai B : </label>
+    <input type="number" id="B">
+  </div>  
+  <div>
+    <label for="C">Masukkan Nilai C : </label>
+    <input type="number" id="C">
+  </div>
+  <div>
+    <label for="D">Masukkan Nilai D : </label>
+    <input type="number" id="D">
+  </div> 
+  <button type="button" id="button">Hitung</button>
+  <p>Hasil Ekspresi Matematika : <span id="hasil"></span></p>
+  <script>
+    const A = document.getElementById("A")
+    const B = document.getElementById("B")
+    const C = document.getElementById("C")
+    const D = document.getElementById("D")
+    const button = document.getElementById("button")
+    const labelHasil = document.getElementById("hasil")
+
+    button.addEventListener('click', function(){ //addEventListener = function
+      let hasil = (parseInt(A.value) - parseInt(B.value)/3 * parseInt(A.value) * parseInt(C.value)) * (1 - parseInt(B.value)/parseInt(C.value)*parseInt(D.value))
+      // let hasil = (A-B/3*A*C)*(1-(B/C*D))
+      labelHasil.textContent = hasil.toFixed(2)})
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!-- c2 = c*c
+r = (-b+2*c2+4*a*b)/(2*c) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>Persamaan Matematika</p>
+  <div>
+    <label for="A">Masukkan Nilai A : </label>
+    <input type="number" id="A"></div>
+  <div>
+    <label for="B">Masukkan Nilai B : </label>
+    <input type="number" id="B"></div>
+  <div>
+    <label for="C">Masukkan Nilai C : </label>
+    <input type="number" id="C"></div>
+  <button type="button" id="button">Hitung</button>
+  <p>Hasil Persamaan Matematika : <span id="hasil"></span></p>
+
+  <script>
+    const A = document.getElementById("A")
+    const B = document.getElementById("B")
+    const C = document.getElementById("C")
+    const button = document.getElementById("button")
+    const labelHasil = document.getElementById("hasil")
+
+    button.addEventListener('click', function(){ //addEventListener = function
+      let hasil = ((-Math.abs(parseInt(B.value)) + 2 * (parseInt(C.value)**2) + 4 * parseInt(A.value) * parseInt(B.value))) / (2 * parseInt(C.value))
+      labelHasil.textContent = hasil.toFixed(2)})
+  </script>
+</body>
+</html>
