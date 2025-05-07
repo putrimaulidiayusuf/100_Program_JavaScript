@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    alert("=== Verivikasi Login Admin ===")
+
+    let pin = prompt("Masukkan PIN Anda : ") || 0
+    let username = prompt("Masukkan Username Anda : ") || 0
+
+    if (username == "admin" && pin == "nimda123") {
+      alert("Login Berhasil")
+    } else if (username == "admin" && pin != "nimda123") {
+      alert("PIN Anda Salah")
+    } else if (username != "admin" && pin == "nimda123") {
+      alert("Username Anda Salah")
+    } else {
+      alert("Username dan PIN Anda Salah")
+    }
+  </script>
+</body>
+</html>

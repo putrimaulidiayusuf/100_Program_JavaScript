@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Perhitungan Kalor</title>
+</head>
+<body>
+  <script>
+    function hitungKalorJenisEs() {
+      alert("=== MENGHITUNG KALOR JENIS ES ===");
+      let m = parseFloat(prompt("Masukkan Massa Benda (kg):")) || 0;
+      let c = parseFloat(prompt("Masukkan Kalor Jenis Zat (JENIS ES):")) || 0;
+      let t = parseFloat(prompt("Masukkan Perubahan Suhu (°C):")) || 0;
+      let q1 = m * c * t;
+      alert("Kalor Jenis Es: " + Math.round(q1) + " (J/kg°C)");
+    }
+
+    function hitungKalorLeburEs() {
+      alert("=== MENGHITUNG KALOR LEBUR ES ===");
+      let m = parseFloat(prompt("Masukkan Massa Benda (kg):")) || 0;
+      let l = parseFloat(prompt("Masukkan Kalor Lebur Es (J/kg):")) || 0;
+      let q2 = m * l;
+      alert("Kalor Lebur Es: " + Math.round(q2) + " (J/kg)");
+    }
+
+    function hitungKalorJenisAir() {
+      alert("=== MENGHITUNG KALOR JENIS AIR ===");
+      let m = parseFloat(prompt("Masukkan Massa Benda (kg):")) || 0;
+      let ca = parseFloat(prompt("Masukkan Kalor Jenis Zat (JENIS AIR):")) || 0;
+      let t = parseFloat(prompt("Masukkan Perubahan Suhu (°C):")) || 0;
+      let q3 = m * ca * t;
+      alert("Kalor Jenis Air: " + Math.round(q3) + " (J/kg°C)");
+    }
+
+    function hitungSemuaKalor() {
+      alert("=== MENGHITUNG SEMUA JENIS KALOR ===");
+      let m = parseFloat(prompt("Masukkan Massa Benda (kg):")) || 0;
+      let c = parseFloat(prompt("Masukkan Kalor Jenis Es (J/kg°C):")) || 0;
+      let l = parseFloat(prompt("Masukkan Kalor Lebur Es (J/kg):")) || 0;
+      let ca = parseFloat(prompt("Masukkan Kalor Jenis Air (J/kg°C):")) || 0;
+      let t = parseFloat(prompt("Masukkan Perubahan Suhu (°C):")) || 0;
+
+      let q1 = m * c * t;
+      let q2 = m * l;
+      let q3 = m * ca * t;
+
+      alert("Kalor Jenis Es: " + Math.round(q1) +
+            "\nKalor Lebur Es: " + Math.round(q2) +
+            "\nKalor Jenis Air: " + Math.round(q3));
+    }
+
+    // Menu utama
+    while (true) {
+      let pilihan = prompt(
+        "PILIH JENIS KALOR YANG AKAN DIHITUNG:\n" +
+        "1. Kalor Jenis Es\n" +
+        "2. Kalor Lebur Es\n" +
+        "3. Kalor Jenis Air\n" +
+        "4. Semua Jenis Kalor\n" +
+        "5. Keluar\n\nMasukkan Pilihan (1-5):"
+      );
+
+      if (pilihan === "1") {
+        hitungKalorJenisEs();
+      } else if (pilihan === "2") {
+        hitungKalorLeburEs();
+      } else if (pilihan === "3") {
+        hitungKalorJenisAir();
+      } else if (pilihan === "4") {
+        hitungSemuaKalor();
+      } else if (pilihan === "5") {
+        alert("Terima kasih, sampai jumpa!");
+        break;
+      } else {
+        alert("Pilihan tidak valid!");
+      }
+    }
+  </script>
+</body>
+</html>

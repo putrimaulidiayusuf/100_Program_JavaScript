@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    alert("=== KONVERSI PANJANG ===");
+
+  let b = parseInt(prompt("Masukkan panjang benda dengan satuan m: "))
+
+  const I_MM = 1000/25.4
+  const K_MM = 100/30.48
+  const Y_MM = 0.9144
+
+  let i = Math.floor(I_MM*b)
+  let k = Math.floor(K_MM*b)
+  let y = Math.floor(Y_MM*b)
+
+    alert(`${b} m, ini berarti panjang suatu benda\n${y} INCHI + ${k} KAKI + ${i} YARD`)
+  </script>
+</body>
+</html>

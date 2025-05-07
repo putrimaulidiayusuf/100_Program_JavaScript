@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let h = parseInt(prompt("Masukkan Hari Proyek : "))
+
+let tahun = Math.floor(h/365)
+let sisa_hari = (h%365)
+let bulan = Math.floor(sisa_hari/30)
+let hari = (sisa_hari%30)
+
+alert(`tahun ${tahun}, bulan ${bulan}, hari ${hari}`)
+
+
+  </script>
+</body>
+</html>

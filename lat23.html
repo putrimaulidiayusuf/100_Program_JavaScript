@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jarak Tempuh Semut</title>
+</head>
+<body>
+  <script>
+    alert("=== JARAK TEMPUH SEMUT DALAM SATUAN CM ===");
+
+    let jarak = parseInt(prompt("Masukkan Jarak (cm):")) || 0;
+
+    let km = Math.floor(jarak / 100000);
+    let sisa = jarak % 100000;
+    let m = Math.floor(sisa / 100);
+    let cm = sisa % 100;
+
+    alert(`Jarak dalam satuan:\n${km} km, ${m} m, ${cm} cm`);
+  </script>
+</body>
+</html>

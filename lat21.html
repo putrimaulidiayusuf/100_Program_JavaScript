@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    alert("=== SELISIH TANGGAL ===");
+
+  let d1 = parseInt(prompt("Days 1 : "))
+  let m1 = parseInt(prompt("Month 1 : "))
+  let y1 = parseInt(prompt("Year 1 : "))
+  let d2 = parseInt(prompt("Days 2 : "))
+  let m2 = parseInt(prompt("Month 2 : "))
+  let y2 = parseInt(prompt("Year 2 : "))
+
+  let tgl1 = (y1*365)+(m1*30)+d1
+  let tgl2 = (y2*365)+(m2*30)+d2
+
+  let selisih = Math.abs(tgl1-tgl2)
+
+  let tahun = Math.floor(selisih/365)
+  let sisa_hari = (selisih%365)
+  let bulan = Math.floor(sisa_hari/30)
+  let hari = (sisa_hari%30)
+
+alert(`Selisih Dari Kedua Tanggal : ${tahun} tahun, ${bulan} bulan, ${hari} hari`)
+
+  </script>
+</body>
+</html>

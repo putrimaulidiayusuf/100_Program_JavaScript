@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    alert("=== MEMBACA NAMA HARI ===")
+    let hari = parseInt(prompt("Masukkan Hari (1-7) : "))
+    let nama_hari = ["Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu", "Minggu"]
+    let nama_hari_terpilih = nama_hari[hari - 1]
+    if (hari >= 1 && hari <= 7) {
+      alert(`Nama hari ke-${hari} adalah ${nama_hari_terpilih}`)
+    } else {
+      alert("Hari tidak valid")
+    }
+  </script>
+</body>
+</html>

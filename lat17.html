@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let pin = "nimda123"
+
+    alert("=== Verivikasi Login Anda ===")
+
+    let username = prompt("Masukkan Username Anda : ")||0
+    let password = prompt("Masukkan Password Anda : ")||0
+
+    if (!username || !password) {
+      alert("Username dan Password tidak boleh kosong")
+    } else if (password == pin) {
+      alert("Login Berhasil")
+    } else {
+      alert("Username atau Password Anda Salah")
+    }
+  </script>
+</body>
+</html>

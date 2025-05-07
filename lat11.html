@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Program Belanja</title>
+</head>
+<body>
+  <script>
+    alert("=== SUBTOTAL BELANJA ===");
+
+    let a1 = parseInt(prompt("Pensil Rp.2000, Jumlah Pembelian:")) || 0;
+    let a2 = parseInt(prompt("Pulpen Rp.3000, Jumlah Pembelian:")) || 0;
+    let a3 = parseInt(prompt("Penghapus Rp.1000, Jumlah Pembelian:")) || 0;
+    let a4 = parseInt(prompt("Buku Tulis Rp.4000, Jumlah Pembelian:")) || 0;
+    let a5 = parseInt(prompt("Buku Gambar Rp.2000, Jumlah Pembelian:")) || 0;
+
+    let b1 = 2000 * a1;
+    let b2 = 3000 * a2;
+    let b3 = 1000 * a3;
+    let b4 = 4000 * a4;
+    let b5 = 5000 * a5;
+
+    let total = b1 + b2 + b3 + b4 + b5;
+    let diskon = total * 12.5 / 100;
+    let hasil = total - diskon;
+
+    alert("Total Belanja Anda: Rp." + total +
+          "\nTotal Diskon 12.5%: Rp." + diskon.toFixed(0) +
+          "\nTotal Pembayaran Setelah Diskon: Rp." + hasil.toFixed(0));
+  </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    alert("=== Kalkulator Sederhana ===")
+  let o1 = Math.floor(prompt("Masukkan Operand 1: "))
+  let opr = prompt("Masukkan operator (+, -, *, /) : ")
+  let o2 = Math.floor(prompt("Masukkan Operand 2: "))
+
+  let hasil;
+if (opr === '+') {
+  hasil = o1 + o2;}
+else if (opr === '-') {
+  hasil = o1 - o2;}
+else if (opr === '*') {
+  hasil = o1 * o2;}
+else if (opr === '/') {
+  hasil = o2 !== 0 ? (o1 / o2).toFixed(2) : "Tak bisa dibagi 0";}
+else {
+  hasil = "Operator tidak dikenal";}
+
+alert(`Hasil dari ${o1} ${opr} ${o2} = ${hasil}`);
+  </script>
+</body>
+</html>

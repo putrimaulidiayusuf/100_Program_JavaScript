@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    alert("=== Bill Belanja ===");
+
+    let b1 = 20000
+    let b2 = 50000
+    let b3 = 40000
+    let b4 = 120000
+
+    let total = b1 + b2 + b3 + b4
+    let diskon = total * 7.5 / 100
+    let hasil = total - diskon
+
+    alert("Total Belanja Anda: Rp." + total +
+          "\nTotal Diskon 7.5%: Rp." + diskon.toFixed(0) +
+          "\nTotal Pembayaran Setelah Diskon: Rp." + hasil.toFixed(0));
+  </script>
+</body>
+</html>

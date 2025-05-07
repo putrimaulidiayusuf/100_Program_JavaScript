@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let detikInput = parseInt(prompt("Masukkan detik: "));
+
+    const HARI_DETIK = 60 * 60 * 24;
+    const JAM_DETIK = 60 * 60;
+
+    let hari = Math.floor(detikInput / HARI_DETIK);
+    let sisaDetik = detikInput % HARI_DETIK;
+
+    let jam = Math.floor(sisaDetik / JAM_DETIK);
+    sisaDetik = sisaDetik % JAM_DETIK;
+
+    let menit = Math.floor(sisaDetik / 60);
+    let detik = sisaDetik % 60;
+
+    alert(`Hari ${hari}, Jam ${jam}, Menit ${menit}, Detik ${detik}`);
+  </script>
+</body>
+</html>
