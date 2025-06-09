@@ -1,0 +1,12 @@
+<script>
+  // const prompt = require('prompt-sync')(); // kalau pakai Node.js, butuh package prompt-sync
+
+const h1 = parseInt(prompt("Masukkan Harga Barang 1 Rp: "));
+const h2 = parseInt(prompt("Masukkan Harga Barang 2 Rp: "));
+const h3 = parseInt(prompt("Masukkan Harga Barang 3 Rp: "));
+
+const s = h1 + h2 + h3;
+const p = s / 20000;
+
+console.log(`Jumlah Point Adalah : ${Math.round(p)}`);
+</script>

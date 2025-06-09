@@ -1,0 +1,17 @@
+<script>
+  function jumlahKabisat(tl, ts) {
+    let jumlah = 0;
+    for (let tahun = tl + 1; tahun <= ts; tahun++) {
+        if ((tahun % 4 === 0 && tahun % 100 !== 0) || (tahun % 400 === 0)) {
+            jumlah++;}}
+    return jumlah;}
+
+const tl = parseInt(prompt("Masukkan Tahun Lahir:"), 10);
+const ts = 2025;
+
+if (tl > ts) {
+    alert("Tahun Lahir tidak boleh melebihi 2025");}
+else {
+    const kabisatCount = jumlahKabisat(tl, ts);
+    alert(`Jumlah ulang tahun pada tahun kabisat sejak ${tl}: ${kabisatCount}`);}
+</script>

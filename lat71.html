@@ -1,0 +1,11 @@
+<body>
+  <script>
+  const kalimat1 = "saya suka belajar python";
+    const kalimat2 = "python sangat menyenangkan untuk belajar";
+  const kata1 = new Set(kalimat1.split(" "));
+    const kata2 = new Set(kalimat2.split(" "));
+
+  const intersection = new Set([...kata1].filter(kata => kata2.has(kata)));
+    console.log("Kata yang sama:", intersection);
+  </script>
+</body>

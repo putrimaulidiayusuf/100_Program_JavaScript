@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function balok(){
+    let panjang = parseInt(prompt('Masukkan Panjang Balok : '))
+    let lebar = parseInt(prompt('Masukkan Lebar Balok : '))
+    let tinggi = parseInt(prompt('Masukkan Tinggi Balok : '))
+    
+    let lp = (p,l,t) => 4* (p+l+t)
+    let k =  (p,l,t) => 2* ((p*l)+(p*t)+(l*t))
+    
+    alert(`Luas Permukaan Balok : ${lp(panjang,lebar,tinggi)} \nKeliling : ${k(panjang,lebar,tinggi)}`)
+  }
+balok()
+balok()
+balok() 
+  </script>
+</body>
+</html>

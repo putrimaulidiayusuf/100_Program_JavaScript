@@ -1,0 +1,25 @@
+<script>
+  // Daftar buah (setiap item disebut 'elemen')
+let buah = ['apel', 'mangga', 'melon', 'anggur', 'manggis'];
+
+// yang dalam kurung namanya indeks
+console.log("Buah pada indeks ke-1:", buah[1]);  // Output: mangga
+
+// untuk mengubah buah
+buah[2] = 'rambutan';  // Mengganti 'melon' jadi 'rambutan'
+
+// untuk menambahkan buah
+buah.push('lemon');  // Menambahkan 'lemon' ke akhir array
+
+// untuk menampilkan semua buah setelah diubah
+console.log("List buah setelah diubah dan ditambah:", buah);
+
+// memunculkan data sebanyak jumlah list
+console.log("\nElemen dan identitas tiap buah (simulasi ID):");
+buah.forEach(function(data, index) {
+    // kalau pakai toString, hasilnya tetap teks
+    // bisa juga pakai index buat tahu urutan buah
+    console.log(`${data}: ${data.toString()} | index: ${index}`);
+});
+
+</script>

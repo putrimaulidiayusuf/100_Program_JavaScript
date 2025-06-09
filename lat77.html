@@ -1,0 +1,38 @@
+<script>
+  // Cerdas ke samping
+let hasil = '';
+for (let i = 0; i < 3; i++) {
+  hasil += 'Cerdas ';}
+console.log(hasil.trim());  // trim() untuk hilangkan spasi di akhir
+
+// Cerdas ke bawah
+for (let i = 0; i < 3; i++) {
+  console.log('Cerdas');}
+
+// ABCD Cerdas ke bawah
+for (let w of 'ABCD') {  // string iterable langsung pakai for-of
+  console.log(w + '. Cerdas');}
+
+// 1 2 3 4 5 = 15 ke samping
+let total = 0;
+let angka = '';
+for (let n = 1; n <= 5; n++) {
+  total += n;
+  if (n !== 5) {
+    angka += `${n} `;}
+  else {
+    angka += `${n} = ${total}`;}}
+console.log(angka);
+
+// 1+2+3+4+5 = 15 ke samping
+total = 0;
+let angkaPlus = '';
+for (let n = 1; n <= 5; n++) {
+  total += n;
+  if (n !== 5) {
+    angkaPlus += `${n} + `;}
+    else {
+    angkaPlus += `${n} = ${total}`;}}
+console.log(angkaPlus);
+
+</script>

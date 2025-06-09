@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const data = [[1, 2], [3, 4], [5, 6]];
+
+    // Cara 1: pakai flat()
+    const gabungan1 = data.flat();
+      console.log("List hasil gabungan (flat):", gabungan1);
+
+    // Cara 2: pakai reduce()
+    const gabungan2 = data.reduce((acc, val) => acc.concat(val), []);
+      console.log("List hasil gabungan (reduce):", gabungan2);
+  </script>
+</body>
+</html>

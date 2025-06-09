@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function limas_segitiga(){
+    let tinggi = parseInt(prompt(`Masukkan Tinggi : `))
+    let alas = parseInt(prompt(`Masukkan Alas : `))
+    let miring = parseInt(prompt(`Masukkan Sisi Miring : `))
+    
+    lp = (a,b,c) => (1/2*(a*b))+(3/2*(b*c))
+    
+    alert(`Luas Pemukaan Limas Segitiga : ${lp(tinggi,alas,miring)}`)}
+    
+limas_segitiga()
+  </script>
+</body>
+</html>

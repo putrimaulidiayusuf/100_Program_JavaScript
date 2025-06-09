@@ -1,0 +1,31 @@
+<script>
+  try {
+  // meminta input dari user, convert ke angka pakai parseInt
+  let a1 = parseInt(prompt("Masukan angka 1 :"));
+  let a2 = parseInt(prompt("Masukan angka 2 :"));
+
+  // cek kalau input bukan angka (NaN)
+  if (isNaN(a1) || isNaN(a2)) {
+    throw "Input harus angka!";
+  }
+
+  // kalkulator
+  let hasilpertambahan = a1 + a2;
+  let hasilpengurangan = a1 - a2;
+  let hasilperkalian = a1 * a2;
+  let hasilpembagian = a1 / a2;
+  let hasilsisabagi = a1 % a2;
+
+  // tampilkan hasil
+  console.log(`${a1} + ${a2} = ${hasilpertambahan}`);
+  console.log(`${a1} - ${a2} = ${hasilpengurangan}`);
+  console.log(`${a1} * ${a2} = ${hasilperkalian}`);
+  console.log(`${a1} / ${a2} = ${hasilpembagian}`);
+  console.log(`${a1} % ${a2} = ${hasilsisabagi}`);
+
+} catch (error) {
+  // menampilkan pesan error jika input bukan angka
+  console.log("Tidak boleh mengisi selain angka");
+}
+
+</script>

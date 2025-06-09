@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const listOfTuples = [[1, 2], [3, 4], [5, 6]];
+    const searchTuple = [3, 4];
+
+    const adaDalamList = listOfTuples.some(
+      tuple => tuple.length === searchTuple.length && tuple.every((v, i) => v === searchTuple[i]));
+
+    console.log("Ada dalam list:", adaDalamList);
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function tabung(){
+  let r = parseInt(prompt(`Masukkan Jari-Jari Tabung : `))
+  let tinggi = parseInt(prompt(`Masukkan tinggi Tabung : `))
+    
+  let phi = 3.14
+  let la =   (r) => phi*r*r
+  let k =  (r) => 2*phi*r
+  let ls =  (r,t)=> 2*r*t
+  let lp =  (r,t)=> 2*phi*r*(r+t)
+    
+    alert(`Luas Permukaan Tabung : ${lp(r,tinggi)}
+Keliling Tabung : ${k(r)}
+Luas Selimut Tabung : ${ls(r,tinggi)}
+Luas Alas : ${la(r)}`)}
+    
+tabung()
+tabung()
+tabung()
+  </script>
+</body>
+</html>

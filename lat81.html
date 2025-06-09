@@ -1,0 +1,11 @@
+<script>
+let n = prompt("Masukkan Nama Anda:");
+let gp = parseInt(prompt("Masukkan Nominal Gaji Pokok Anda:"));
+
+let t = Math.floor(0.20 * gp);  // Tunjangan 20%
+let p = Math.floor(0.15 * gp + t);  // Potongan 15% + tunjangan
+let gb = gp + t - p;  // Gaji Bersih
+
+console.log(`Nama Karyawan : ${n} Gaji Bersih : ${gb}`);
+
+</script>

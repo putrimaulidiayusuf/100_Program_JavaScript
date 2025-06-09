@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function lingkaran(){
+    let jari2 = parseInt(prompt(`Masukkan Jari-Jari : `))
+    
+    let phi = 3.14
+    let luas =  (r,x) => phi*jari2*jari2
+    let keliling =  (r,x) => 2*jari2*phi
+    
+    alert(`Luas Lingkaran : ${luas(jari2,phi)} cm2 \nKeliling Lingkaran ${keliling(jari2,phi)} cm`)}
+    
+lingkaran()
+lingkaran()
+lingkaran()
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<body>
+  <script>
+    function isAnagram(word1, word2) {
+      return word1.split('').sort().join('') === word2.split('').sort().join('');}
+
+    console.log(isAnagram("listen", "silent")); // true
+    console.log(isAnagram("hello", "world"));   // false
+
+  </script>
+</body>

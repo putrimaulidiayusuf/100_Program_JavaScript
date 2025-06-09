@@ -1,0 +1,30 @@
+<h2>Masukkan data untuk QR Code:</h2>
+  <input type="text" id="inputData" placeholder="Ketik sesuatu..." style="width: 400px;" />
+<button onclick="generateQRCode()">Buat QR Code</button>
+
+<div id="qrcode" style="margin-top:20px;"></div>
+
+<!-- Load QRCode.js library dari CDN -->
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+
+<script>
+function generateQRCode() {
+  const data = document.getElementById('inputData').value.trim();
+    if (!data) {
+      alert('Silakan masukkan data terlebih dahulu!');
+    return;}
+
+// Bersihkan QR Code sebelumnya
+  const qrContainer = document.getElementById('qrcode');
+    qrContainer.innerHTML = '';
+
+  try {
+    new QRCode(qrContainer, {
+      text: data,
+      width: 200,
+      height: 200,
+      colorDark : "#000000",
+      colorLight : "#ffffff",});}
+  catch (e) {
+    alert('Terjadi error saat membuat QR Code: ' + e.message);}}
+</script>

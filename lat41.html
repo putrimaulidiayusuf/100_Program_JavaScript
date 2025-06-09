@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let p = parseFloat(prompt('Masukkan nilai pixel: '))
+
+    function n_pixel(p){
+    if (p > 255){
+        return 255}
+    else if (p < 0){
+        return 0}
+    else {
+        return p}
+      }
+
+//       function n_pixel(p) {
+//   return Math.max(0, Math.min(255, p));
+// }
+
+alert(`Nilai ${p} = ${n_pixel(p)} pixel`)
+  </script>
+</body>
+</html>

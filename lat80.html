@@ -1,0 +1,18 @@
+<script>
+  function persegi() {
+  // minta input sisi (dari prompt, hasilnya string)
+  let sisi = parseInt(prompt('Masukkan Sisi:'));
+
+  // definisi fungsi luas dan keliling pakai arrow function
+  let luas = s => s * s;
+  let keliling = s => 4 * s;
+
+  // tampilkan hasil
+  console.log(`Luas : ${luas(sisi)} \nKeliling : ${keliling(sisi)}`);
+}
+
+// panggil 3x seperti di Python
+persegi();
+persegi();
+persegi();
+</script>

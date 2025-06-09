@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function j(bulan, tahun){
+      const h = [31, 28, 31, 30, 31, 30 , 31, 31, 30, 31, 30, 31]
+
+    function is_kabisat(t){
+        return (t % 4 === 0 && t % 100 !== 0) || (t % 400 === 0)}
+
+    if (bulan < 1 || bulan > 12) {
+        return "Bulan tidak tersedia"}
+
+  let jumlah = h[bulan - 1];
+    if (bulan === 2 && is_kabisat(tahun)){
+        jumlah = 29}
+        
+    return jumlah}
+
+  const b = parseInt(prompt('Masukkan Nomor Bulan 1-12 : '))
+  const t = parseInt(prompt('Masukkan Tahun : '))
+
+    if (isNaN(b) || isNaN(t)) {
+      alert("Input tidak valid, harap masukkan angka yang benar.")}
+    else{
+      alert(`jumlah hari dalam bulan ${b} tahun ${t} adalah ${j(b, t)}`)}
+  </script>
+</body>
+</html>

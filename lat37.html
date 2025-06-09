@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validasi Digit</title>
+</head>
+<body>
+  <script>
+    let n = prompt("Masukkan Karakter Digit 0 - 9 : ");
+    let num = parseInt(n);
+
+    if (!isNaN(num) && num >= 0 && num <= 9) {
+      alert(`Angka ${num} yang anda masukkan tepat`);
+    } else {
+      alert(`Angka ${n} yang anda masukkan bernilai -99`);
+    }
+  </script>
+</body>
+</html>

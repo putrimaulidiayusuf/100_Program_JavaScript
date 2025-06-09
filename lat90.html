@@ -1,0 +1,13 @@
+<script>
+const n = parseInt(prompt("Masukan Nilai : "), 10);
+
+const deret_ganjil = [];
+for (let i = 1; i <= n; i++) {
+  if (i % 2 !== 0) {
+    deret_ganjil.push(i);}}
+
+const j = deret_ganjil.reduce((acc, val) => acc + val, 0);
+
+console.log(`Deret Nilai Ganjil : [${deret_ganjil.join(', ')}]`);
+console.log(`Jumlah Deret Bilangan Ganjil : ${j}`);
+</script>

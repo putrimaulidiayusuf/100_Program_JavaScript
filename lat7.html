@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upah Karyawan</title>
+</head>
+<body>
+  <script>
+    let n = prompt("Masukkan Nama Anda: ");
+    let g = prompt("Masukkan Golongan Pekerjaan Anda (A/B/C/D): ").toUpperCase();
+    let j = parseInt(prompt("Masukkan Seluruh Jam Kerja Anda 1 Minggu Kebelakang: "));
+
+    let upahPerJam;
+
+    switch(g) {
+      case 'A': upahPerJam = 4000; break;
+      case 'B': upahPerJam = 5000; break;
+      case 'C': upahPerJam = 6000; break;
+      case 'D': upahPerJam = 7500; break;
+      default:
+        alert("Golongan tidak dikenal!");
+        throw new Error("Golongan tidak valid");
+    }
+
+    let upah;
+    if (j <= 48) {
+      upah = j * upahPerJam;
+      alert(`Karyawan ${n} mendapatkan upah sebesar Rp ${upah}`);
+    } else {
+      let jamLembur = j - 48;
+      let upahMingguan = 48 * upahPerJam;
+      let upahLembur = jamLembur * upahPerJam * 1.5; // Bonus 1.5x untuk lembur
+      upah = upahMingguan + upahLembur;
+      alert(`Karyawan ${n} mendapatkan upah sebesar Rp ${upah}\nDari upah mingguan Rp ${upahMingguan} dan upah lembur Rp ${upahLembur}`);
+    }
+  </script>
+</body>
+</html>
